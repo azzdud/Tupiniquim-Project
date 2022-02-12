@@ -8,22 +8,22 @@ namespace Tupiniquim.ConsoleApp
         {
             string comando, posicaoInicial;
             int posY = 0;
-            int posX = 0; 
-            char direcao = 'N';            
+            int posX = 0;
+            char direcao = 'N';
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Robô Tupiniquim em missão à Marte!\n");                        
+            Console.WriteLine("Robô Tupiniquim em missão à Marte!\n");
             Console.ResetColor();
 
             for (int j = 0; j < 2; j++)
             {
-                Console.Write("\nDigite o a X onde está o Robô: ");
+                Console.Write("\nDigite o X onde está o Robô: ");
                 posX = Convert.ToInt32(Console.ReadLine());
 
-                Console.Write("Agora, a Y onde está o Robô: ");
+                Console.Write("Agora, o Y onde está o Robô: ");
                 posY = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Em seguida, digite a rotação inicial: ");
-                posicaoInicial = Convert.ToString(Console.ReadLine());
+                direcao = Convert.ToChar(Console.ReadLine());
                 Console.WriteLine("\n");
 
                 Console.WriteLine("Digite os comandos de movimento: ");
@@ -94,10 +94,8 @@ namespace Tupiniquim.ConsoleApp
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Sua posição final é: " + posX + " " + posY + " " + direcao + ".");
                 Console.ResetColor();
-
-                direcao = 'N';
             }
-               Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
